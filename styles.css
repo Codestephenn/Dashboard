@@ -1,87 +1,93 @@
+/* Reset margin and padding, set default font and background color */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-
-.grid {display: grid;
-  grid-template-columns: 1fr 4fr;
-  height: 100vh;
-  
 }
 
-.header{
+/* Main grid layout for the page */
+.grid {
   display: grid;
-  gap:30px;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+}
+
+/* Header styling */
+.header {
+  display: grid;
+  gap: 30px;
   background-color: #fff;
   grid-column: 2 / 3;
   grid-template-columns: 2fr 1fr;
   padding: 20px 40px 10px 40px;
 }
 
-
-.header-top-left{
+/* Header top-left section styling */
+.header-top-left {
   display: flex;
   gap: 30px;
 }
 
-.header-top-left input{
+/* Input field styling in the header */
+.header-top-left input {
   width: 80%;
   height: 50px;
- /* padding: 5px; */
-  background-color: #e2e8f0;;
+  background-color: #e2e8f0;
   border-radius: 50px;
   border: none;
   font-size: 1rem;
 }
 
-.greeting-user h5{
+/* Greeting user styles */
+.greeting-user h5 {
   margin: 0;
 }
 
-greeting-user h2{
+greeting-user h2 {
   margin-top: 0;
 }
 
-.header-top-right{
+/* Header top-right section styling */
+.header-top-right {
   display: flex;
-  
-}
-.header-top-right .bell{
-  margin-right: 40px;
+  gap:10px;
 }
 
-.header-bottom-left{
+.header-top-right .bell {
+  margin-right: 4px;
+}
+
+/* Header bottom-left section styling */
+.header-bottom-left {
   display: flex;
   align-self: center;
   gap: 30px;
-  
 }
 
-.avartar{
+/* Avatar styling */
+.avartar {
   width: 100px;
-  
 }
+
 .profile-pics {
   width: 100px;
   border-radius: 50px;
-  
-  }
-  
-  .profile-pics-small{
-    width: 60px;
-    border-radius: 50px;
-  }
-  
-.header-bottom-right{
-  align-self: center;
-  display: flex;
-  
-  
 }
 
+.profile-pics-small {
+  width: 60px;
+  border-radius: 50px;
+}
 
-.header-bottom-right button{
+/* Header bottom-right section styling */
+.header-bottom-right {
+  align-self: center;
+  display: flex;
+}
+
+/* Button styling in the header */
+.header-bottom-right button {
   padding: 15px 15px;
   background-color: #007bff;
   color: #fff;
@@ -92,49 +98,44 @@ greeting-user h2{
   font-size: 1.5;
 }
 
-.btn{
+/* Margin adjustment for buttons */
+.btn {
   margin-right: 10px;
 }
 
+/* Sidebar styling */
 .sidebar {
   background-color: #007bff;
   color: #fff;
   padding: 20px;
-
-  grid-column: 1 / 2 ;
- 
-  gap:5px;
-  align-items: start;
-  
-  
-}
-
-.sidebar__logo img {
-  width: 50px;
-  margin-bottom: 5px;
- 
-}
-
-.sidebar__logo{
-   display: grid;
-  grid-template-columns: 1fr 3fr;
-  
-}
-
-.sidebar__logo img{
-  juustify-self: start;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  
-  
-}
-
-.sidebar__nav{
- display: grid;
-  grid-template-columns: 1fr;
+  grid-column: 1 / 2;
   gap: 5px;
   align-items: start;
 }
 
+/* Sidebar logo section styling */
+.sidebar__logo img {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.sidebar__logo {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.sidebar__logo img {
+  justify-self: start;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Sidebar navigation styling */
+.sidebar__nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  align-items: start;
+}
 
 .sidebar__nav ul {
   list-style: none;
@@ -151,42 +152,40 @@ greeting-user h2{
   font-size: 18px;
 }
 
-.menu li{
+/* Menu item styling */
+.menu li {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  
 }
+
 li > icons {
-  juustify-self: end;
+  justify-self: end;
   align-self: end;
 }
 
 li > a {
-  juustify-self: start;
+  justify-self: start;
   align-self: end;
   font-weight: bold;
-
 }
 
-.sidebar__nav ul li > .icons{
+.sidebar__nav ul li > .icons {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
   width: 30px;
 }
 
-
-
-.icons{
-  width:35px;
-  
+/* General icon styling */
+.icons {
+  width: 35px;
 }
 
-.main{
+/* Main content area styling */
+.main {
   height: 100%;
   background-color: #e2e8f0;
-  
 }
 
-
+/* Content section styling */
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -195,6 +194,7 @@ li > a {
   grid-row: 2 / 3;
 }
 
+/* Projects section styling */
 .projects {
   background-color: inherit;
   /*padding: 20px;
@@ -202,14 +202,14 @@ li > a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
 }
 
+/* Projects grid styling */
 .projects__grid {
   display: grid;
-  
- grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-    
 }
 
+/* Project card styling */
 .project-card {
   background-color: #fff;
   padding: 20px;
@@ -220,104 +220,105 @@ li > a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project-card p{
+.project-card p {
   margin-bottom: 2rem;
 }
 
-.project-card__icons{
+/* Project card icons styling */
+.project-card__icons {
   position: absolute;
   right: 20px;
   bottom: 20px;
   margin-top: 20px;
 }
 
-.project-card__icons .icons{
+.project-card__icons .icons {
   width: 20px;
-  
 }
 
-.project-card__icons .icons:nth-child(1),.project-card__icons .icons:nth-child(2) {
-    margin-right: 10px;}
+.project-card__icons .icons:nth-child(1), .project-card__icons .icons:nth-child(2) {
+  margin-right: 10px;
+}
 
-.side-content{
+/* Side content section styling */
+.side-content {
   display: grid;
-  gap:30px;
+  gap: 30px;
   grid-template-columns: 1fr;
-  
 }
 
-.side-content .side-content-card , .trends{
+.side-content .side-content-card, .trends {
   background-color: #fff;
   border-radius: 8px;
   padding: 30px;
 }
 
-
-.side-content .side-content-card p{
+.side-content .side-content-card p {
   margin: 5px;
 }
 
+/* Side content card styling */
 .side-content-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
 .side-content-card h4 {
-    margin: 0 0 10px;
-    font-size: 16px;
-    font-weight: bold;
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .side-content-card p {
-    margin: 0 0 20px;
-    font-size: 14px;
-    color: #666;
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #666;
 }
 
 .side-content-card hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 20px 0;
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
 }
 
-
-.trends{
+/* Trending section styling */
+.trends {
   display: flex;
   flex-direction: column;
   align-content: start;
-  
 }
 
+/* Individual trend item styling */
 .trend-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust space between items */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust space between items */
 }
 
 .trend-item-icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .trend-item-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .trend-item-txt h6 {
-    margin: 0;
-    font-size: 14px;
+  margin: 0;
+  font-size: 14px;
 }
 
 .trend-item-txt p {
-    margin: 0;
-    font-size: 12px;
-    color: gray;
+  margin: 0;
+  font-size: 12px;
+  color: gray;
 }
 
-.trending{
+.trending {
   grid-row: 2 / 3;
 }
